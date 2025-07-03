@@ -1,4 +1,3 @@
-import React, { useEffect } from "react";
 import { userData, themes } from "../constants/utils";
 
 export default function UserDashboard() {
