@@ -1,9 +1,11 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { userData, themes } from "../constants/utils";
 
 export default function UserDashboard() {
+  // Update theme globally and persist in localStorage
   const handleThemeChange = (theme) => {
     document.documentElement.setAttribute("data-theme", theme);
+    localStorage.setItem("selected-theme", theme);
   };
 
   return (
@@ -15,7 +17,7 @@ export default function UserDashboard() {
         {/* Profile Image */}
         <div className="flex-shrink-0">
           <img
-            src="public\snorlax.jpg"
+            src="public/snorlax.jpg"
             alt="Profile"
             className="rounded-full w-32 h-32 object-cover border-4 border-primary"
           />
