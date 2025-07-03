@@ -1,6 +1,10 @@
+import DragBall from "../components/DragBall";
 import { userData, themes } from "../constants/utils";
+import { useNavigate } from "react-router-dom";
 
 export default function UserDashboard() {
+  const navigate = useNavigate();
+
   // Update theme globally and persist in localStorage
   const handleThemeChange = (theme) => {
     document.documentElement.setAttribute("data-theme", theme);
@@ -9,7 +13,20 @@ export default function UserDashboard() {
 
   return (
     <div className="p-6 space-y-6 font-sans">
-      <div className="text-4xl font-bold mb-4">User Dashboard</div>
+      {/* DragBall rendered with pointer-events-none so it doesn't block interactions */}
+      <div className="pointer-events-none fixed top-0 left-0 w-full h-full z-50">
+        <DragBall />
+      </div>
+
+      <div className="flex justify-between items-center mb-4">
+        <div className="text-4xl font-bold">User Dashboard</div>
+        <button
+          onClick={() => navigate(-1)}
+          className="btn btn-sm btn-outline btn-primary"
+        >
+          Go Back
+        </button>
+      </div>
 
       {/* Profile Section */}
       <div className="flex flex-col md:flex-row gap-6 bg-base-100 shadow-lg rounded-xl p-6">

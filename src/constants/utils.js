@@ -34,6 +34,111 @@ export const dummyPosts = [
     link: "https://drive.google.com/offer-letter",
     tags: ["#SDE", "#Internship"],
   },
+   {
+    id: 6,
+    type: "Project",
+    title: "Ecommerce Platform",
+    link: "https://github.com/user/ecommerce",
+    tags: ["#WebDev", "#Node.js"]
+  },
+  {
+    id: 7,
+    type: "Certification",
+    title: "AWS Certified Developer",
+    link: "https://aws.amazon.com/certification/example",
+    tags: ["#Cloud", "#AWS"]
+  },
+  {
+    id: 8,
+    type: "Coding Rank",
+    title: "Codeforces Specialist",
+    link: "https://codeforces.com/profile/user",
+    tags: ["#DSA", "#Codeforces"]
+  },
+  {
+    id: 9,
+    type: "Research Paper",
+    title: "Blockchain in Education",
+    link: "https://researchhub.com/blockchain-edu",
+    tags: ["#Blockchain", "#Research"]
+  },
+  {
+    id: 10,
+    type: "Internship",
+    title: "Frontend Intern @ Zomato",
+    link: "https://zomato.com/offer-letter",
+    tags: ["#React", "#Internship"]
+  },
+  {
+    id: 11,
+    type: "Project",
+    title: "Personal Finance Tracker",
+    link: "https://github.com/user/finance-tracker",
+    tags: ["#Finance", "#Vue"]
+  },
+  {
+    id: 12,
+    type: "Certification",
+    title: "Meta Front-End Developer",
+    link: "https://coursera.org/meta-cert",
+    tags: ["#HTML", "#CSS", "#JS"]
+  },
+  {
+    id: 13,
+    type: "Coding Rank",
+    title: "HackerRank Gold Badge in SQL",
+    link: "https://hackerrank.com/user/sql",
+    tags: ["#SQL", "#HackerRank"]
+  },
+  {
+    id: 14,
+    type: "Research Paper",
+    title: "Quantum Computing Overview",
+    link: "https://quantumjournal.org/papers/qc-overview",
+    tags: ["#Quantum", "#Research"]
+  },
+  {
+    id: 15,
+    type: "Internship",
+    title: "ML Intern @ TCS",
+    link: "https://tcs.com/ml-offer",
+    tags: ["#ML", "#Internship"]
+  },
+  {
+    id: 16,
+    type: "Project",
+    title: "AI Chatbot",
+    link: "https://github.com/user/ai-chatbot",
+    tags: ["#AI", "#NLP"]
+  },
+  {
+    id: 17,
+    type: "Certification",
+    title: "Scrum Master Certified",
+    link: "https://scrum.org/certified",
+    tags: ["#Scrum", "#Agile"]
+  },
+  {
+    id: 18,
+    type: "Coding Rank",
+    title: "GeeksforGeeks 5⭐ C++",
+    link: "https://geeksforgeeks.org/user/profile",
+    tags: ["#C++", "#GFG"]
+  },
+  {
+    id: 19,
+    type: "Research Paper",
+    title: "IoT for Smart Cities",
+    link: "https://iotjournal.org/smartcities",
+    tags: ["#IoT", "#UrbanTech"]
+  },
+  {
+    id: 20,
+    type: "Internship",
+    title: "Data Analyst Intern @ Swiggy",
+    link: "https://swiggy.com/da-offer",
+    tags: ["#Data", "#Internship"]
+  }
 ];
 
 export const sidebarData = {

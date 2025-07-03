@@ -31,8 +31,8 @@ export default function DragBall() {
       style={{
         x,
         y,
-        width: 40,
-        height: 40,
+        width: 20,
+        height: 20,
         borderRadius: "50%",
         backgroundColor: "#ff0088",
         position: "absolute",
