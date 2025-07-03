@@ -47,3 +47,32 @@ export const sidebarData = {
   topProjects: ["Ecom Dashboard", "Chat App", "AI Summarizer"],
   topSkills: ["#React", "#Node.js", "#AI", "#DSA"],
 };
+
+
+
+export const themes = [
+  "light",
+  "dark",
+  "acid",
+  "retro",
+  "dim",
+  "abyss",
+  "coffee",
+  "cupcake",
+  "bumblebee",
+  "emerald",
+  "corporate",
+  "synthwave",
+  "cyberpunk",
+  "valentine",
+  "halloween"
+];
+
+export const userData = {
+  name: "Ronak Nangia",
+  email: "ronak@example.com",
+  role: "Full Stack Developer",
+  posts: 12,
+  likes: 120,
+  joined: "March 2024",
+};
