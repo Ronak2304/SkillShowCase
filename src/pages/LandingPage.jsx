@@ -80,7 +80,7 @@ const LandingPage = () => {
           {filteredPosts.map((post) => (
             <div
               key={post.id}
-              className="bg-base-100 shadow-md border rounded-xl p-4 flex flex-col gap-4 min-h-[270px]"
+              className="bg-base-100 shadow-md border rounded-xl p-4 flex flex-col justify-between h-full min-h-[300px]"
             >
               <div className="space-y-4">
                 <div className="text-xl font-semibold line-clamp-2 min-h-[48px]">{post.title}</div>
@@ -93,7 +93,7 @@ const LandingPage = () => {
                 >
                   View More
                 </a>
-                <div className="flex space-x-2 mt-2 flex-wrap">
+                <div className="flex flex-wrap gap-2 mt-2">
                   {post.tags.map((tag) => (
                     <span
                       key={tag}
@@ -134,6 +134,7 @@ const LandingPage = () => {
                 </div>
               </div>
             </div>
+
           ))}
         </div>
 
