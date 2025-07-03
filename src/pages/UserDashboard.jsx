@@ -33,7 +33,7 @@ export default function UserDashboard() {
         {/* Profile Image */}
         <div className="flex-shrink-0">
           <img
-            src="public/snorlax.jpg"
+            src="/snorlax.jpg"
             alt="Profile"
             className="rounded-full w-32 h-32 object-cover border-4 border-primary"
           />
