@@ -8,7 +8,7 @@ export default function UserDashboard() {
 
   return (
     <div className="p-6 space-y-6 font-sans">
-      <div className="text-2xl font-bold mb-4">User Dashboard</div>
+      <div className="text-4xl font-bold mb-4">User Dashboard</div>
 
       {/* Profile Section */}
       <div className="flex flex-col md:flex-row gap-6 bg-base-100 shadow-lg rounded-xl p-6">

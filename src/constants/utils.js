@@ -70,9 +70,7 @@ export const themes = [
 
 export const userData = {
   name: "Ronak Nangia",
-  email: "ronak@example.com",
+  email: "ronak.23544@sscbs.du.ac.in",
   role: "Full Stack Developer",
-  posts: 12,
-  likes: 120,
   joined: "March 2024",
 };
