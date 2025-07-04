@@ -80,7 +80,7 @@ const LandingPage = () => {
           {filteredPosts.map((post) => (
             <div
               key={post.id}
-              className="bg-base-100 shadow-md border rounded-xl p-4 flex flex-col justify-between h-full min-h-[300px]"
+              className="bg-base-100 shadow-md border rounded-xl p-4 flex flex-col justify-between min-h-[300px]"
             >
               <div className="space-y-4">
                 <div className="text-xl font-semibold line-clamp-2 min-h-[48px]">{post.title}</div>
