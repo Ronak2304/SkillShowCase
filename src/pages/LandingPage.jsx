@@ -42,20 +42,20 @@ const LandingPage = () => {
       >
       </div>
 
-      {/* Header with Title & Profile */}
-      <div className="flex justify-between items-center z-10 relative">
-        <div>
-          <h1 className="text-5xl font-bold mb-2">SkillShowcase Explore</h1>
+     {/* Header with Title & Profile */}
+      <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center z-10 relative gap-4">
+        <div className="flex-1">
+          <h1 className="text-4xl sm:text-5xl font-bold mb-2">SkillShowcase Explore</h1>
           <p className="text-gray-600 text-md max-w-xl">
             SkillShowcase is your personalized tech portfolio feed — explore
             projects, certifications, internships, and coding ranks shared by
             others in the community.
           </p>
         </div>
-        <div className="relative">
+        <div className="relative flex-shrink-0">
           <img
             src="/snorlax.jpg"
-            className="w-14 h-14 rounded-full cursor-pointer border-2 border-primary"
+            className="w-14 h-14 sm:w-16 sm:h-16 min-w-[56px] min-h-[56px] rounded-full cursor-pointer border-2 border-primary object-cover"
             onClick={() => setShowDropdown(!showDropdown)}
           />
           {showDropdown && (
@@ -70,6 +70,7 @@ const LandingPage = () => {
           )}
         </div>
       </div>
+
 
       {/* Search Bar */}
       <div className="flex items-center gap-2 max-w-md">
