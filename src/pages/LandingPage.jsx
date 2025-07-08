@@ -35,7 +35,14 @@ const LandingPage = () => {
         <DragBall />
       </div>
 
-      {/* Header */}
+      {/* 🔵 Banner Section */}
+      <div
+        className="w-full h-40 mb-6 rounded-xl bg-cover bg-center shadow-lg flex items-center justify-center"
+        style={{ backgroundImage: "url('/banner.jpg')" }}
+      >
+      </div>
+
+      {/* Header with Title & Profile */}
       <div className="flex justify-between items-center z-10 relative">
         <div>
           <h1 className="text-5xl font-bold mb-2">SkillShowcase Explore</h1>
