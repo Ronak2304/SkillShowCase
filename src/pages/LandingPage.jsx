@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import DragBall from "../components/DragBall";
-import { Heart, MessageCircle, Bookmark, User, Search } from "lucide-react";
+import { Heart, MessageCircle, Bookmark, Search } from "lucide-react";
 import { dummyPosts, sidebarData } from "../constants/utils";
 import { useNavigate } from "react-router-dom";
 
@@ -10,6 +10,7 @@ const LandingPage = () => {
   const [likedPosts, setLikedPosts] = useState([]);
   const [savedPosts, setSavedPosts] = useState([]);
   const [searchQuery, setSearchQuery] = useState("");
+  const [openCommentPostId, setOpenCommentPostId] = useState(null); // NEW
 
   const toggleLike = (id) => {
     setLikedPosts((prev) =>
@@ -29,7 +30,7 @@ const LandingPage = () => {
 
   return (
     <div className="relative p-6 space-y-10 font-sans bg-base-200 min-h-screen overflow-hidden">
-      {/* DragBall rendered with pointer-events-none so it doesn't block interactions */}
+      {/* DragBall */}
       <div className="pointer-events-none fixed top-0 left-0 w-full h-full z-50">
         <DragBall />
       </div>
@@ -39,7 +40,9 @@ const LandingPage = () => {
         <div>
           <h1 className="text-5xl font-bold mb-2">SkillShowcase Explore</h1>
           <p className="text-gray-600 text-md max-w-xl">
-            SkillShowcase is your personalized tech portfolio feed — explore projects, certifications, internships, and coding ranks shared by others in the community.
+            SkillShowcase is your personalized tech portfolio feed — explore
+            projects, certifications, internships, and coding ranks shared by
+            others in the community.
           </p>
         </div>
         <div className="relative">
@@ -83,7 +86,9 @@ const LandingPage = () => {
               className="bg-base-100 shadow-md border rounded-xl p-4 flex flex-col justify-between min-h-[300px]"
             >
               <div className="space-y-4">
-                <div className="text-xl font-semibold line-clamp-2 min-h-[48px]">{post.title}</div>
+                <div className="text-xl font-semibold line-clamp-2 min-h-[48px]">
+                  {post.title}
+                </div>
                 <div className="text-sm text-gray-500">{post.type}</div>
                 <a
                   href={post.link}
@@ -109,7 +114,9 @@ const LandingPage = () => {
                   <span
                     className="flex items-center gap-1 cursor-pointer"
                     onClick={() => toggleLike(post.id)}
-                    style={{ color: likedPosts.includes(post.id) ? "red" : "" }}
+                    style={{
+                      color: likedPosts.includes(post.id) ? "red" : "",
+                    }}
                   >
                     <Heart
                       size={16}
@@ -117,13 +124,18 @@ const LandingPage = () => {
                     />
                     Like
                   </span>
-                  <span className="flex items-center gap-1 cursor-pointer">
+                  <span
+                    className="flex items-center gap-1 cursor-pointer"
+                    onClick={() => setOpenCommentPostId(post.id)} // NEW
+                  >
                     <MessageCircle size={16} /> Comment
                   </span>
                   <span
                     className="flex items-center gap-1 cursor-pointer"
                     onClick={() => toggleSave(post.id)}
-                    style={{ color: savedPosts.includes(post.id) ? "black" : "" }}
+                    style={{
+                      color: savedPosts.includes(post.id) ? "black" : "",
+                    }}
                   >
                     <Bookmark
                       size={16}
@@ -134,7 +146,6 @@ const LandingPage = () => {
                 </div>
               </div>
             </div>
-
           ))}
         </div>
 
@@ -158,7 +169,6 @@ const LandingPage = () => {
               ))}
             </ul>
           </div>
-
 
           <div className="bg-base-100 shadow-lg rounded-xl p-6">
             <h2 className="text-lg font-bold mb-2">🚀 Top Projects</h2>
@@ -184,6 +194,28 @@ const LandingPage = () => {
           </div>
         </div>
       </div>
+
+      {/* 💬 Comment Modal */}
+      {openCommentPostId !== null && (
+        <div className="fixed inset-0 bg-black bg-opacity-40 flex items-center justify-center z-[999]">
+          <div className="bg-base-100 w-full max-w-md p-6 rounded-lg shadow-xl relative">
+            <button
+              onClick={() => setOpenCommentPostId(null)}
+              className="absolute top-2 right-3 text-xl font-bold text-gray-600 hover:text-black"
+            >
+              ×
+            </button>
+            <h2 className="text-xl font-bold mb-4">💬 Comments</h2>
+            <textarea
+              placeholder="Pen your thoughts..."
+              className="textarea textarea-bordered w-full min-h-[120px]"
+            ></textarea>
+            <div className="flex justify-end mt-4">
+              <button className="btn btn-primary btn-sm">Submit</button>
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   );
 };
